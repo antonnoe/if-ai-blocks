@@ -1,0 +1,23 @@
+{
+  "version": "2026-01-01",
+  "blocks": [
+    {
+      "block_id": "traffic-fines-reference",
+      "block_type": "static_update_block",
+      "scope": "Road traffic fines reference text",
+      "context_allowlist": [],
+      "output_template": "standard_compact_update_v1",
+      "source_policy": {
+        "mode": "default_deny",
+        "allow": [
+          {
+            "domain": "service-public.fr",
+            "allowed_paths": ["/particuliers/vosdroits/"]
+          }
+        ]
+      },
+      "cache_ttl_seconds": 21600,
+      "anomaly_policy_id": "deterministic-v1"
+    }
+  ]
+}
