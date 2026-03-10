@@ -4,7 +4,7 @@ import type {
   OutputStatus,
   RequestTrace,
   SourceReference,
-} from "@if-ai-blocks/types";
+} from "../../types/src/index.ts";
 
 export interface EditorialAnchorContract {
   editorial_anchor_text: string;

@@ -1,15 +1,19 @@
-export type BlockType = "static_update_block" | "contextual_update_block";
+export const BLOCK_TYPES = ["static_update_block", "contextual_update_block"] as const;
+export type BlockType = (typeof BLOCK_TYPES)[number];
 
-export type OutputStatus =
-  | "ok"
-  | "changed_since_publication"
-  | "information_not_available"
-  | "input_anomaly"
-  | "source_error"
-  | "validation_error"
-  | "policy_blocked";
+export const OUTPUT_STATUSES = [
+  "ok",
+  "changed_since_publication",
+  "information_not_available",
+  "input_anomaly",
+  "source_error",
+  "validation_error",
+  "policy_blocked",
+] as const;
+export type OutputStatus = (typeof OUTPUT_STATUSES)[number];
 
-export type AnomalySeverity = "none" | "warning" | "critical";
+export const ANOMALY_SEVERITIES = ["none", "warning", "critical"] as const;
+export type AnomalySeverity = (typeof ANOMALY_SEVERITIES)[number];
 
 export interface RequestTrace {
   requestId: string;

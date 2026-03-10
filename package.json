@@ -10,6 +10,12 @@
   "scripts": {
     "build": "npm run --workspaces build",
     "typecheck": "npm run --workspaces typecheck",
-    "lint": "npm run --workspaces lint"
-  }
+    "lint": "npm run --workspaces lint",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
+    "mvp": "node --experimental-strip-types packages/core/src/cli.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "type": "module"
 }

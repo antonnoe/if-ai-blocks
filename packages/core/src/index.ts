@@ -1,5 +1,5 @@
-import type { UpdateBlockRequest, UpdateBlockResponse } from "@if-ai-blocks/contracts";
-import type { RegistryConfigDraft } from "@if-ai-blocks/config";
+import type { UpdateBlockRequest, UpdateBlockResponse } from "../../contracts/src/index.ts";
+import type { RegistryConfigDraft } from "../../config/src/index.ts";
 
 export interface RetrievalEngine {
   run(request: UpdateBlockRequest): Promise<unknown>;
@@ -14,3 +14,5 @@ export interface BlockRuntime {
   retrieval: RetrievalEngine;
   decision: DecisionEngine;
 }
+
+export { resolveExampleRegistryPath, runMvpFromRegistryPath } from "./engine.ts";
