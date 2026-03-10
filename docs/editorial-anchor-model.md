@@ -14,4 +14,5 @@ Container context draft includes:
 - title
 - url
 - function
+- section or anchor location (`section_or_anchor`)
 - topic tags

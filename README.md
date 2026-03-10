@@ -12,6 +12,8 @@ This repository currently contains **only initial architecture scaffolding**:
 
 No retrieval, model, or decision business logic is implemented yet.
 
+All workspace packages are currently **type-only** in this scaffold phase (typecheck-only, no emitted runtime build artifacts).
+
 ## Workspace packages
 
 - `@if-ai-blocks/types`: shared enums and cross-package type boundaries.
