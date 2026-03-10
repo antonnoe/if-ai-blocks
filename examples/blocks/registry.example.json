@@ -13,6 +13,9 @@
           {
             "domain": "service-public.fr",
             "allowed_paths": ["/particuliers/vosdroits/"]
+          },
+          {
+            "domain": "legifrance.gouv.fr"
           }
         ]
       },

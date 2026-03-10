@@ -1,9 +1,14 @@
 # Source Policy Draft
 
-Policy is fail-closed (`defaultDeny: true`).
+Canonical policy shape:
+- `mode: "default_deny"`
+- `allow: SourceAllowRule[]`
+- `notes?`
 
-Whitelisting model:
-- domain-level allowlist
-- optional path prefixes per domain
+`SourceAllowRule` supports:
+- `domain`
+- optional `allowed_paths` (domain-only rules are valid)
+
+Policy remains fail-closed by construction through the `default_deny` mode.
 
 No unrestricted search behavior is represented in this skeleton.

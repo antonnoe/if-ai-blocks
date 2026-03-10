@@ -1,6 +1,5 @@
 import type {
   AnomalySeverity,
-  BlockType,
   OutputStatus,
   RequestTrace,
   SourceReference,
@@ -13,13 +12,24 @@ export interface EditorialAnchorContract {
   page_url: string;
 }
 
-export interface UpdateBlockRequest {
+export interface StaticUpdateBlockRequest {
   block_id: string;
-  block_type: BlockType;
+  block_type: "static_update_block";
   control_date: string;
   anchor: EditorialAnchorContract;
-  context?: Record<string, string | number | boolean | null>;
 }
+
+export interface ContextualUpdateBlockRequest {
+  block_id: string;
+  block_type: "contextual_update_block";
+  control_date: string;
+  anchor: EditorialAnchorContract;
+  context: Record<string, string | number | boolean | null>;
+}
+
+export type UpdateBlockRequest =
+  | StaticUpdateBlockRequest
+  | ContextualUpdateBlockRequest;
 
 export interface CompactSummaryItem {
   key: string;

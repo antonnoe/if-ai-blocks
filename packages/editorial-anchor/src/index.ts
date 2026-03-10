@@ -17,5 +17,6 @@ export interface ContainerContext {
   container_title: string;
   container_url: string;
   container_function: string;
+  section_or_anchor: string;
   topic_tags: string[];
 }

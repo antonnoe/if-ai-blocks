@@ -1,14 +1,5 @@
 import type { BlockType } from "@if-ai-blocks/types";
-
-export interface SourceRule {
-  domain: string;
-  allowed_paths?: string[];
-}
-
-export interface SourcePolicyConfig {
-  mode: "default_deny";
-  allow: SourceRule[];
-}
+import type { SourcePolicy } from "@if-ai-blocks/source-policy";
 
 export interface BlockConfigDraft {
   block_id: string;
@@ -16,7 +7,7 @@ export interface BlockConfigDraft {
   scope: string;
   context_allowlist: string[];
   output_template: string;
-  source_policy: SourcePolicyConfig;
+  source_policy: SourcePolicy;
   cache_ttl_seconds: number;
   anomaly_policy_id: string;
 }

@@ -12,13 +12,13 @@ export type OutputStatus =
 export type AnomalySeverity = "none" | "warning" | "critical";
 
 export interface RequestTrace {
-  requestId: string;
-  resultId: string;
-  checkedAtIso: string;
+  request_id: string;
+  result_id: string;
+  checked_at_iso: string;
 }
 
 export interface SourceReference {
   label: string;
   url: string;
-  checkedAtIso: string;
+  checked_at_iso: string;
 }

@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run --workspaces build",
+    "build": "echo 'workspace is type-only in scaffold phase; no JS emit build configured'",
     "typecheck": "npm run --workspaces typecheck",
     "lint": "npm run --workspaces lint"
   }

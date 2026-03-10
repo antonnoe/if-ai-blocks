@@ -1,15 +1,15 @@
-export interface SourceWhitelistEntry {
+export interface SourceAllowRule {
   domain: string;
-  allowedPaths: string[];
+  allowed_paths?: string[];
 }
 
-export interface SourcePolicyDraft {
-  defaultDeny: true;
-  whitelist: SourceWhitelistEntry[];
+export interface SourcePolicy {
+  mode: "default_deny";
+  allow: SourceAllowRule[];
   notes?: string;
 }
 
-export const DEFAULT_SOURCE_POLICY: SourcePolicyDraft = {
-  defaultDeny: true,
-  whitelist: [],
+export const DEFAULT_SOURCE_POLICY: SourcePolicy = {
+  mode: "default_deny",
+  allow: [],
 };
