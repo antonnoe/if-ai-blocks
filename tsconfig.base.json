@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@if-ai-blocks/types": ["packages/types/src/index.ts"],
+      "@if-ai-blocks/contracts": ["packages/contracts/src/index.ts"],
+      "@if-ai-blocks/config": ["packages/config/src/index.ts"],
+      "@if-ai-blocks/source-policy": ["packages/source-policy/src/index.ts"],
+      "@if-ai-blocks/editorial-anchor": ["packages/editorial-anchor/src/index.ts"],
+      "@if-ai-blocks/core": ["packages/core/src/index.ts"]
+    }
+  }
+}
